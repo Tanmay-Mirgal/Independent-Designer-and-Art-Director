@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppines", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+span {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    /*position: relative;
+    top: 20vh;
+    right:41vh;*/
+}
+.navbar {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1; /* Ensure the navbar is above the slider */
+}
+
+.navbar a {
+    color: white; /* White color for the links */
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px; /* Add padding to make the links clickable */
+   /* background-color: rgba(255, 255, 255, 0.5); /* White with reduced opacity */
+    border-radius: 20px; /* Rounded corners for the links */
+    font-size:18px;
+}
+
+.navbar a.active {
+    opacity: 1; /* Full opacity for the active link */
+}
+
+.navbar a:not(.active) {
+    opacity: 0.5; /* Reduced opacity for inactive links */
+}
+
+h1{
+    color:white;
+    position:relative;
+    right:-53%;
+    top:22vw;
+    font-size: 30px;
+}
+#target{
+    position:relative;
+    right:-46%;
+    top:20vw;
+    font-size: 30px;
+}
+h4{
+    color:rgba(255, 255, 255, 0.401);
+    position:relative;
+    right:-53%;
+    top:23vw;
+    bottom:2vh;
+    font-size: 17px;
+
+}
+section span{
+    position:relative;
+    left:20vh;
+}
+.container{
+    position: absolute;
+    top: 14vh; /* Start the text at the vertical center of the slide */
+   left: 70%; /* Start the text at the horizontal center of the slide */
+    transform: translate(-50%, 50%); /* Center the text both vertically and horizontally */
+    opacity: 0; /* Initially hide the text */
+    animation: slideIn 1s ease forwards; 
+}
+   
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Start with fully transparent */
+        transform: translate(-50%, 100%); /* Start from the bottom center */
+    }
+    100% {
+        opacity: 1; /* End with fully visible */
+        transform: translate(-50%, 0%); /* End at the center */
+    }
+}
+#container{
+    position:relative;
+    left:-50%;
+}
+#logo{
+    position:fixed;
+    top:38vh;
+    left:10%;
+}
